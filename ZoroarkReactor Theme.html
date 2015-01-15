@@ -1,0 +1,803 @@
+<!doctype HTML PUBLIC>
+<html>
+<!--
+
+===============THEME BY NATHAN/IAMVISHNU===============
+===============THEME BY NATHAN/IAMVISHNU===============
+===============THEME BY NATHAN/IAMVISHNU===============
+ ______   ______   __    __  __  __  ______  ____  __    __  __   __  __   __
+|__  __| /  __  \ |  \  /  ||  ||  ||__  __|/ ___\|  |  |  ||  \ |  ||  | |  |
+  |  |  |  |__|  ||   \/   ||  ||  |  |  |  \ \_  |  |__|  ||   \|  ||  | |  |
+  |  |  |   __   ||  \  /  ||  ||  |  |  |   \_ \ |   __   ||  \ \  ||  | |  |
+ _|  |_ |  |  |  ||  |\/|  |\  \|  | _|  |_ ___\ \|  |  |  ||  |\   ||  |_|  |
+|______||__|  |__||__|  |__| \_____||______|\____/|__|  |__||__| \__| \_____/
+===============IAMVISHNU.TUMBLR.COM====================
+===============IAMVISHNU.TUMBLR.COM====================
+===============IAMVISHNU.TUMBLR.COM====================
+
+-->
+
+
+
+
+
+
+
+  <head>
+  	<meta charset="utf-8">
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}"> <!--Favicon -->
+    <!--Begin Metas-->
+    {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+            <meta name="color:Background Color" content="#fff" />
+            <meta name="color:Header Background" content="#808080" />
+            <meta name="color:Header Text Color" content="#000" />
+            <meta name="color:Header Links Color" content="#fff" />
+            <meta name="color:Header Links Hover Color" content="808080" />
+            <meta name="color:Description Text Color" content="#000" />
+            <meta name="color:Post Background Color" content="#fff" />
+            <meta name="color:Post Text Color" content="#000" />
+            <meta name="color:Post Link Color" content="#808080" />
+            <meta name="color:Post Link Hover Color" content="#fff" />
+            <meta name="font:Description Font" content="Helvetica, Futura, sans-serif" />
+            <meta name="font:Post Font" content="Helvetica, Futura, sans-serif" />
+            <meta name="if:Show Random Post Link" content="1" />
+            <meta name="if:Show Like and Reblog Buttons" content="1" />
+            <meta name="image:Background Image" content="" />
+    <!--End Metas-->
+    <style type="text/css">
+        /*CSS goes here*/
+        body {
+            background:url('{image:Background Image}');
+            background-color:{color:Background Color};
+        }
+        /*Start blocks*/
+        #header {
+            width:750px;
+            height:auto;
+            background-color:{color:Header Background};
+            margin:10px auto;
+            border-radius:5px;
+            display:block;
+        }
+        
+        #footer {
+            clear:both;
+            width:750px;
+            background-color:{color:Header Background};
+            height:auto;
+            margin:10px auto;
+            display:block;
+            border-radius:5px;
+        }
+        /*End blocks*/
+        
+        a {
+            text-decoration:none;
+        }
+        
+        #title {
+            font-family:Impact, serif;
+            color:{color:Header Text Color};
+            text-transform:capitalize;
+            position:relative;
+            margin:5px 50px 5px 50px;
+            text-align:center;
+            font-size:auto;
+        }
+        
+        #sidebarpic {
+            display:block;
+            margin:auto;
+            border-radius:10px;
+        }
+        
+        #description {
+            text-align:center;
+            font-size:12px;
+            font-family:{font:Description Font};
+            color:{color:Description Text Color};
+        }
+        
+        #header p a {
+            text-decoration:none;
+            color:{color:Header Links Color};
+            font-family:Arial;
+            font-family:{font:Description Font};
+        }
+        
+        #header p {
+            text-align:center;
+            font-size:12px;
+            font-family:{font:Description Font};
+            color:{color:Description Text Color};
+        }
+        
+        #linkscontainer {
+            color:{color:Description Text Color};
+            text-align:center;
+            font-family:{font:Description Font};
+            margin:10px auto;
+            width:750px;
+            height:auto;
+        }
+        
+        .headerlink {
+            text-decoration:none;
+            color:{color:Header Links Color};
+            font-family:Arial;
+            font-size:10px;
+            font-family:{font:Description Font};
+        }
+        
+        .headerlink:hover {
+            color:{color:Header Links Hover Color};
+        }
+        
+        #footerlinkscontainer {
+            margin:2px 5px;
+            width:auto;
+            height:auto;
+            font-family:{font:Description Font};
+            color:{color:Description Text Color};
+            font-size:10px;
+        }
+        
+        .post {
+            width:750px;
+            height:auto;
+            background:{color:Post Background Color};
+            margin:20px auto;
+            border-radius:5px;
+            clear:both;
+        }
+        
+        .post a {
+            color:{color:Post Link Color};
+        }
+        
+        
+        
+        .post a:hover {
+            color:{color:Post Link Hover Color};
+        }
+        
+        .titlecontainer {
+            width:auto;
+            height:auto;
+            margin-left:5px;
+            margin-top:5px;
+        }
+        
+        .hover {
+            float:right;
+            opacity:.75;
+            height:auto;
+            width:auto;
+            background:{color:Header Background};
+            border-radius:5px;
+            padding:2px;
+            margin:5px 5px;
+        }
+        
+        .title {
+            font-family:{font:Post Font};
+            color:{color:Post Text Color};
+            margin-bottom:2px;
+        }
+        
+        .postbodycontainer {
+            margin-left:5px;
+            padding-top:5px;
+            width:700;
+            height:auto;
+            font-family:{font:Post Font};
+            color:{color:Post Text Color};
+            font-size:12px;
+            line-height:100%;
+        }
+        
+        .postbodycontainer * {
+            color:{color:Post Text Color};
+        }
+        
+        .postbodycontainer a {
+            text-decoration:none;
+            color:{color:Post Link Color};
+        }
+        
+        .postfoot {
+            text-align:right;
+            font-family:{font:Post Font};
+            color:{color:Post Text Color};
+            font-size:11px;
+            margin-right:5px;
+            margin-bottom:2px;
+            width:auto;
+            clear:right;
+        }
+        
+        .foottable {
+            font-size:11px;
+            margin-right:4px;
+            margin-bottom:5px;
+            display:inline-block;
+            line-height:80%;
+        }
+        
+        .notescontainer {
+            width:750px;
+            height:auto;
+            background:{color:Post Background Color};
+            margin:20px auto;
+            border-radius:5px;
+            padding:2px;
+            clear:both;
+        }
+        
+        .notescontainer * {
+            font-family:{font:Post Font};
+            color:{color:Post Text Color};
+        }
+        
+        .notescontainer a {
+            color:{color:Post Link Color};
+        }
+        
+        .photo {
+            float:left;
+            border-radius:5px;
+            margin:5px 5px 20px 0;
+            border:5px solid {color:Post Background Color};
+            width:500px;
+        }
+        
+        blockquote {
+            padding:0px;
+            padding-left:5px;
+            margin:5px;
+            border-left:2px solid {color:Header Background};
+        }
+        
+        .photosetcontainer {
+            width:auto;
+            height:auto;
+            max-width:500px;
+            float:left;
+            margin-bottom:20px;
+            border:5px solid {color:Post Background Color};
+            border-radius:5px;
+            background:{color:Post Background Color};
+            
+        }
+        
+        .linktitle {
+            font-family:{font:Post Font};
+            color:{color:Post Link Color};
+            text-transform:Capitalize;
+        }
+        
+        .audiodata {
+            font-family:{font:Post Font};
+            font-size:10px;
+            color:{color:Post Text Color};
+            background:{color:Header Background};
+            border-radius:5px;
+            margin:5px 0;
+            height:auto;
+            max-width:250px;
+        }
+        
+        .adata {
+            border-left:1px solid black;
+            font-size:11px;
+        }
+        
+        .ask {
+            font-family:{font:Post Font};
+            background:{color:Header Background};
+            border-bottom-right-radius:5px;
+            border-top-left-radius:5px;
+        }
+        
+        /*Custom CSS Below*/
+        {CustomCSS}
+        /*End CSS*/
+    </style>
+  </head>
+
+<!--Break between Head and Body-->
+  
+  <body>
+    <!--Begin Body code here-->
+    <!--Begin Header-->
+    <div id="header">
+        <h1 id="title">{Title}</h1>
+        <a href="{BlogURL}"><img id="sidebarpic" src="{PortraitURL-96}"></a>
+        {block:Description}
+            <p id="description">{Description}</p>
+        {/block:Description}
+        <div id="linkscontainer">
+            <!--Previous Page-->{block:PreviousPage}<a class="headerlink" href="{PreviousPage}"><b>&leftarrow;</a></b> {/block:PreviousPage}
+            <!--Ask-->{block:AskEnabled}<a class="headerlink" href="/ask">{AskLabel}</a> | {/block:AskEnabled}
+            <!--Submit-->{block:SubmissionsEnabled}<a class="headerlink" href="/submit">{SubmitLabel}</a> | {/block:SubmissionsEnabled}
+            <!--Archive--><a class="headerlink" href="/archive">Archive</a>
+            <!--Random-->{block:IfShowRandomPostLink} | <a class="headerlink" href="/random">Random</a>{/block:IfShowRandomPostLink}
+            <!--Theme Credit DO NOT DELETE OR A THOUSAND MONKEYS WILL DEVOUR YOUR URETHRA--> | <a class="headerlink" href="http://iamvishnu.tumblr.com">Theme</a>
+            <!--Next Page-->{block:NextPage} <a class="headerlink" href="{NextPage}"><b>&rightarrow;</a></b>{/block:NextPage}
+        </div> <!--End Links Container-->
+    </div> <!--End Header-->
+    
+    
+    
+    <!--Begin Posts-->
+    {block:Posts}
+        <!--Begin Text-->
+        {block:Text}
+            <div class="post">
+                {block:IfShowLikeAndReblogButtons}<div class="hover">
+                    {LikeButton color="grey"} {ReblogButton color="grey"}
+                </div>{/block:IfShowLikeAndReblogButtons}
+                <div class="titlecontainer">
+                    {block:Title}<h2 class="title">{Title}</h2>{/block:Title}
+                </div>
+                <div class="postbodycontainer">
+                    <p>{Body}</p>
+                </div>
+                <div class="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                            <p class="postfootcontent">{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}
+                            
+                            <a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a> {block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}
+                    {/block:HasTags}</p>
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                            <p class="postfootcontent">{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom} {block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}
+                    {block:HasTags}
+                        Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}
+                    {/block:HasTags}</p>{/block:PermalinkPage}
+                </div>
+            </div>
+            <!--Notes-->
+            {block:PostNotes}
+                <div class="notescontainer">
+                    <p style="line-height:50%">Notes:</p>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+        {/block:Text}
+        <!--End Text Posts-->
+        
+        <!--Begin Pic Posts-->
+        {block:Photo}
+            <div class="post">
+                <img class="photo" src="{PhotoURL-500}" alt="{PhotoAlt}">
+                {block:IfShowLikeAndReblogButtons}<div class="hover">
+                    {LikeButton color="grey"} {ReblogButton color="grey"}
+                </div>{/block:IfShowLikeAndReblogButtons}
+                <div class="postbodycontainer">
+                    {block:Caption}{Caption}{/block:Caption}
+                </div>
+                <div class="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                            <table class="foottable">
+                                <tr><td><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a></td></tr>
+                                <tr><td>{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}</td></tr>
+                                <tr><td>{block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}</td></tr>
+                    {/block:HasTags}
+                            </table>
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                            <table class="foottable">
+                                <tr><td><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}</a></td></tr>
+                                <tr><td>{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}</td></tr>
+                                <tr><td>{block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}</td></tr>
+                    {/block:HasTags}
+                            </table>
+                        {/block:PermalinkPage}
+                </div>
+            </div>
+            <!--Notes-->
+            {block:PostNotes}
+                <div class="notescontainer">
+                    <p style="line-height:50%">Notes:</p>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+        {/block:Photo}
+        <!--End Pic Posts-->
+        
+        <!--Begin Panorama-->
+        {block:Panorama}
+            <div class="post">
+                {LinkOpenTag}<img class="photo" src="{PhotoURL-Panorama}" />{LinkCloseTag}
+                {block:IfShowLikeAndReblogButtons}<div class="hover">
+                    {LikeButton color="grey"} {ReblogButton color="grey"}
+                </div>{/block:IfShowLikeAndReblogButtons}
+                <div class="postbodycontainer">
+                    {block:Caption}{Caption}{/block:Caption}
+                </div>
+                <div class="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                            <table class="foottable">
+                                <tr><td><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a></td></tr>
+                                <tr><td>{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}</td></tr>
+                                <tr><td>{block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}</td></tr>
+                    {/block:HasTags}
+                            </table>
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                            <table class="foottable">
+                                <tr><td><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}</a></td></tr>
+                                <tr><td>{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}</td></tr>
+                                <tr><td>{block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}</td></tr>
+                    {/block:HasTags}
+                            </table>
+                        {/block:PermalinkPage}
+                </div>
+            </div>
+            <!--Notes-->
+            {block:PostNotes}
+                <div class="notescontainer">
+                    <p style="line-height:50%">Notes:</p>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+        {/block:Panorama}
+        <!--End Panorama-->
+        
+        <!--Begin Photoset-->
+        {block:Photoset}
+            <div class="post">
+                <div class="photosetcontainer">{Photoset-500}</div>
+                {block:IfShowLikeAndReblogButtons}<div class="hover">
+                    {LikeButton color="grey"} {ReblogButton color="grey"}
+                </div>{/block:IfShowLikeAndReblogButtons}
+                <div class="postbodycontainer">
+                    {block:Caption}{Caption}{/block:Caption}
+                </div>
+                <div class="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                            <table class="foottable">
+                                <tr><td><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a></td></tr>
+                                <tr><td>{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}</td></tr>
+                                <tr><td>{block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}</td></tr>
+                    {/block:HasTags}
+                            </table>
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                            <table class="foottable">
+                                <tr><td><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}</a></td></tr>
+                                <tr><td>{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}</td></tr>
+                                <tr><td>{block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}</td></tr>
+                    {/block:HasTags}
+                            </table>
+                        {/block:PermalinkPage}
+                </div>
+            </div>
+            <!--Notes-->
+            {block:PostNotes}
+                <div class="notescontainer">
+                    <p style="line-height:50%">Notes:</p>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+        {/block:Photoset}
+        <!--End Photoset-->
+        
+        <!--Begin Quote-->
+        {block:Quote}
+            <div class="post">
+                {block:IfShowLikeAndReblogButtons}<div class="hover">
+                    {LikeButton color="grey"} {ReblogButton color="grey"}
+                </div>{/block:IfShowLikeAndReblogButtons}
+                <div class="titlecontainer">
+                    <h2 class="title">"{Quote}"</h1>
+                </div>
+                {block:Source}<div class="postbodycontainer">
+                    - {Source}
+                </div>{/block:Source}
+                <div class="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                            <p class="postfootcontent">{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}
+                            
+                            <a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a> {block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}
+                    {/block:HasTags}</p>
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                            <p class="postfootcontent">{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom} {block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}
+                    {block:HasTags}
+                        Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}
+                    {/block:HasTags}</p>{/block:PermalinkPage}
+                </div>
+            </div>
+            <!--Notes-->
+            {block:PostNotes}
+                <div class="notescontainer">
+                    <p style="line-height:50%">Notes:</p>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+        {/block:Quote}
+        <!--End Link-->
+        
+        <!--Begin Link-->
+        {block:Link}
+            <div class="post">
+                {block:IfShowLikeAndReblogButtons}<div class="hover">
+                    {LikeButton color="grey"} {ReblogButton color="grey"}
+                </div>{/block:IfShowLikeAndReblogButtons}
+                <div class="titlecontainer">
+                    <h2><a href="{Target}" class="linktitle">{Name}</a></h2>
+                </div>
+                {block:Description}
+                <div class="postbodycontainer">
+                    {Description}
+                </div>
+                {/block:Description}
+                <div class="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                            <p class="postfootcontent">{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}
+                            
+                            <a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a> {block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}
+                    {/block:HasTags}</p>
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                            <p class="postfootcontent">{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom} {block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}
+                    {block:HasTags}
+                        Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}
+                    {/block:HasTags}</p>{/block:PermalinkPage}
+                </div>
+            </div>
+            <!--Notes-->
+            {block:PostNotes}
+                <div class="notescontainer">
+                    <p style="line-height:50%">Notes:</p>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+        {/block:Link}
+        <!--End Link-->
+        
+        <!--Begin Chat-->
+        {block:Chat}
+            <div class="post">
+            {block:IfShowLikeAndReblogButtons}<div class="hover">
+                    {LikeButton color="grey"} {ReblogButton color="grey"}
+                </div>{/block:IfShowLikeAndReblogButtons}
+                {block:Title}
+                    <div class="titlecontainer">
+                        <h2 class="title">{Title}</h2>
+                    </div>
+                {/block:Title}
+                <div class="postbodycontainer">
+                    {block:Lines}
+                        <ul>
+                            {block:Label}
+                               <em>({name})</em> <b>{Label}</b> {Line}
+                            {/block:Label}
+                        </ul>
+                    {/block:Lines}
+                </div>
+                <div class="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                            <p class="postfootcontent">{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}
+                            
+                            <a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a> {block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}
+                    {/block:HasTags}</p>
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                            <p class="postfootcontent">{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom} {block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}
+                    {block:HasTags}
+                        Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}
+                    {/block:HasTags}</p>{/block:PermalinkPage}
+                </div>
+            </div>
+            <!--Notes-->
+            {block:PostNotes}
+                <div class="notescontainer">
+                    <p style="line-height:50%">Notes:</p>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+        {/block:Chat}
+        <!--End Chat-->
+        
+        <!--Begin Audio-->
+        {block:Audio}
+            <div class="post">
+                {block:IfShowLikeAndReblogButtons}<div class="hover">
+                    {LikeButton color="grey"} {ReblogButton color="grey"}
+                </div>{/block:IfShowLikeAndReblogButtons}
+                {block:AlbumArt}
+                <img class="photo" src="{AlbumArtURL}">
+                {/block:AlbumArt}
+                <table class="audiodata">
+                    {block:TrackName}<tr>
+                        <td>Track:</td>
+                        <td class="adata">{TrackName}</td>
+                    </tr>{/block:TrackName}
+                    {block:Artist}<tr>
+                        <td>Artist:</td>
+                        <td class="adata">{Artist}</td>
+                    </tr>{/block:Artist}
+                    {block:Album}<tr>
+                        <td>Album:</td>
+                        <td class="adata">{Album}</td>
+                    </tr>{/block:Album}
+                    {block:PlayCount}<tr>
+                        <td>Plays:</td>
+                        <td class="adata">{PlayCount}</td>
+                    </tr>{/block:PlayCount}
+                </table>
+                {block:AudioPlayer}{AudioPlayerBlack}{/block:AudioPlayer}
+                {block:AudioEmbed}{AudioEmbed-250}{/block:AudioEmbed}
+                {block:Caption}<div class="postbodycontainer">
+                    {Caption}
+                </div>{/block:Caption}
+                <div class="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                            <table class="foottable">
+                                <tr><td><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a></td></tr>
+                                <tr><td>{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}</td></tr>
+                                <tr><td>{block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}</td></tr>
+                    {/block:HasTags}
+                            </table>
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                           <table class="foottable">
+                                <tr><td><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}</a></td></tr>
+                                <tr><td>{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}</td></tr>
+                                <tr><td>{block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}</td></tr>
+                    {/block:HasTags}
+                            </table>
+                        {/block:PermalinkPage}
+                </div>
+            </div>
+            <!--Notes-->
+            {block:PostNotes}
+                <div class="notescontainer">
+                    <p style="line-height:50%">Notes:</p>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+        {/block:Audio}
+        <!--End Audio-->
+        
+        <!--Begin Video-->
+        {block:Video}
+            <div class="post">
+                {block:IfShowLikeAndReblogButtons}<div class="hover">
+                    {LikeButton color="grey"} {ReblogButton color="grey"}
+                </div>{/block:IfShowLikeAndReblogButtons}
+                <span class="photo">{Video-500}</span>
+                {block:Caption}
+                    <div class="postbodycontainer">
+                        {Caption}
+                    </div>
+                {/block:Caption}
+                <div class="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                           <table class="foottable">
+                                <tr><td><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a></td></tr>
+                                <tr><td>{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}</td></tr>
+                                <tr><td>{block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}</td></tr>
+                    {/block:HasTags}
+                            </table>
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                            <table class="foottable">
+                                <tr><td><a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}</a></td></tr>
+                                <tr><td>{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}</td></tr>
+                                <tr><td>{block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}</td></tr>
+                    {/block:HasTags}
+                            </table>
+                        {/block:PermalinkPage}
+                </div>
+            </div>
+            <!--Notes-->
+            {block:PostNotes}
+                <div class="notescontainer">
+                    <p style="line-height:50%">Notes:</p>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+        {/block:Video}
+        <!--End Video-->
+        
+        <!--Begin Ask-->
+        {block:Answer}
+            <div class="post">
+                {block:IfShowLikeAndReblogButtons}<div class="hover">
+                    {LikeButton color="grey"} {ReblogButton color="grey"}
+                </div>{/block:IfShowLikeAndReblogButtons}
+                <table class="ask">
+                    <tr>
+                        <td><img id="askimg" src="{AskerPortraitURL-48}"></td>
+                        <td>{Asker}: </td>
+                        <td>{Question}</td>
+                    </tr>
+                    {block:Answerer}<tr class="answer">
+                        <td>{AnswererPortraitURL-48}</td>
+                        <td>{Answerer}: </td>
+                        <td>{Answer}</td>
+                    </tr>{/block:Answerer}
+                </table>
+                <div class="postbodycontainer">
+                    {Replies}
+                </div>
+                <div class="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                            <p class="postfootcontent">{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom}
+                            
+                            <a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a> {block:HasTags} Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}
+                    {/block:HasTags}</p>
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                            <p class="postfootcontent">{block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom} {block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}
+                    {block:HasTags}
+                        Tagged: {block:Tags}<a href="{TagURLChrono}">{Tag}</a>, {/block:Tags}
+                    {/block:HasTags}</p>{/block:PermalinkPage}
+                </div>
+            </div>
+            <!--Notes-->
+            {block:PostNotes}
+                <div class="notescontainer">
+                    <p style="line-height:50%">Notes:</p>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+        {/block:Answer}
+        <!--End Ask-->
+    {/block:Posts}
+    <!--End Posts-->
+    
+    
+    
+    
+    <div id="footer">
+        <div id="footerlinkscontainer">
+            <!--Previous Page-->{block:PreviousPage}<a class="headerlink" href="{PreviousPage}">&leftarrow;</a> {/block:PreviousPage}
+            <!--Pagecount-->Page {CurrentPage} of {TotalPages} |
+            <!--RSS--><a class="headerlink" href="{RSS}">RSS | </a>
+            <!--Mobile--><a class="headerlink" href="/mobile">Mobile</a>
+            <!--Theme Copyright. Again, DO NOT REMOVE--> | Theme &copy; <b><a href="http://iamvishnu.tumblr.com" class="headerlink">iamvishnu</a></b>.
+            <!--Next Page-->{block:NextPage} <a class="headerlink" href="{NextPage}">&rightarrow;</a>{/block:NextPage}
+        </div> <!--End Footer Link Container-->
+    </div> <!--End Footer-->
+    
+    
+  </body>
+</html>

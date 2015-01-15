@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<!--
+
+===============THEME BY NATHAN/IAMVISHNU===============
+===============THEME BY NATHAN/IAMVISHNU===============
+===============THEME BY NATHAN/IAMVISHNU===============
+ ______   ______   __    __  __  __  ______  _____  __    __  __   __  __   __
+|__  __| /  __  \ |  \  /  ||  ||  ||__  __|/  ___\|  |  |  ||  \ |  ||  | |  |
+  |  |  |  |__|  ||   \/   ||  ||  |  |  |  \  \_  |  |__|  ||   \|  ||  | |  |
+  |  |  |   __   ||  \  /  ||  ||  |  |  |   \_  \ |   __   ||  \ \  ||  | |  |
+ _|  |_ |  |  |  ||  |\/|  |\  \|  | _|  |_ ___\  \|  |  |  ||  |\   ||  |_|  |
+|______||__|  |__||__|  |__| \_____||______|\_____/|__|  |__||__| \__| \_____/
+===============IAMVISHNU.TUMBLR.COM====================
+===============IAMVISHNU.TUMBLR.COM====================
+===============IAMVISHNU.TUMBLR.COM====================
+
+TERMS OF USE: This theme is 100% free to use for any blog. You are free to modify this code for personal use only. DO NOT redistribute this theme or remove theme credits. Thanks!
+
+-->
+<html>
+    <head>
+        <title>{Title}{block:TagPage} &int; Posts Tagged &lsquo;{Tag}&rsquo;{/block:TagPage}{block:PostSummary} &int; {PostSummary}{/block:PostSummary}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        <meta name="image:Background Image" content="" />
+        <meta name="image:Sidebar Image" content="" />
+        <meta name="image:Logo Image" content="" />
+        <meta name="color:Background Color" content="#111111" />
+        <meta name="color:Content Background Color" content="#000" />
+        <meta name="color:Content Accent Color" content="#860000" />
+        <meta name="color:Content Accent Hover Color" content="" />
+        <meta name="color:Text Color" content="#fff" />
+        <meta name="color:Link Color" content="#fff" />
+        <meta name="color:Link Hover Color" content="#fff" />
+        <meta name="font:Font" content="" />
+        <meta name="if:Flip Sidebar" content="0" />
+        <meta name="text:Custom Link 1 URL" content="" />
+        <meta name="text:Custom Link 1 Text" content="" />
+        <meta name="text:Custom Link 2 URL" content="" />
+        <meta name="text:Custom Link 2 Text" content="" />
+        <meta name="text:Custom Link 3 URL" content="" />
+        <meta name="text:Custom Link 3 Text" content="" />
+        <style>
+            body {
+                background:url('{image:Background Image}') no-repeat fixed center bottom;
+                background-color:{color:Background Color};
+            }
+            
+            * {
+                font-family:{font:Font};
+            }
+            
+            a {
+                color:{color:Link Color};
+                text-decoration:none;
+            }
+            
+            a:hover {
+                color:{color:Link Hover Color};
+            }
+            
+            blockquote {
+                border-left:2px solid {color:Content Accent Color};
+                padding-left:5px;
+                margin-left:10px;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+                margin:0;
+            }
+            
+            .content {
+                background:{color:Content Background Color};
+                border:2px solid black;
+                color:{color:Text Color};
+                padding:5px;
+                box-shadow:3px 3px 10px 0 black;
+                font-family:{font:Font};
+                font-size:10pt;
+            }
+            
+            #sideboob {
+                width:375px;
+                position:fixed;
+                top:100px;
+                {block:IfFlipSidebar}
+                left:50%;
+                {/block:IfFlipSidebar}
+                {block:IfNotFlipSidebar}
+                right:50%;
+                {/block:IfNotFlipSidebar}
+                text-align:center;
+            }
+            
+            #sidepic {
+                width:370px;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                border:1px solid black;
+            }
+            
+            #logo {
+                width:375px;
+                margin-top:-100px;
+                position:absolute;
+                z-index:5;
+                right:0;
+            }
+            
+            #desc {
+                margin-top:5px;
+                margin-bottom:5px;
+            }
+            
+            select {
+                border-radius:3px;
+                outline:none;
+                margin-bottom:10px;
+            }
+            
+            #postwrapper {
+                position:absolute;
+                width:500px;
+                top:50px;
+                {block:IfFlipSidebar}
+                right:50%;
+                margin-right:25px;
+                {/block:IfFlipSidebar}
+                {block:IfNotFlipSidebar}
+                left:50%;
+                margin-left:10px;
+                {/block:IfNotFlipSidebar}
+            }
+            
+            .post {
+                width:500px;
+                padding:5px;
+                margin-bottom:10px;
+            }
+            
+            .photo {
+                width:497px;
+                border:1px solid black;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            
+            .titlecontainer {
+                background:{color:Content Accent Color};
+                color:{color:Text Color};
+                margin:-5px;
+                margin-bottom:5px;
+                padding:5px;
+                border-bottom:1px solid black;
+            }
+            
+            .titlecontainer:hover {
+                background:{color:Content Accent Hover Color};
+            }
+            
+            .linkpost h2, .linkpost p {
+                text-align:center;
+            }
+            
+            .linkpost:hover h2 {
+                text-decoration:underline;
+            }
+            
+            .even {
+                background:{color:Content Accent Color};
+            }
+            
+            #label {
+                border-right:2px solid black;
+                border-collapse:collapse;
+            }
+            
+            #audiocontainer {
+                width:460px;
+                padding-left:20px;
+                padding-right:20px;
+                margin-top:10px;
+            }
+            
+            #audiodata {
+                max-width:225px;
+                float:left;
+                display:inline-block;
+                border:1px solid {color:Content Accent Color};
+                border-radius:4px;
+                padding:3px;
+                background:{color:Content Background Color}
+            }
+            
+            .audioplayer {
+                float:right;
+                display:inline-block;
+                border:1px solid {color:Content Accent Color};
+                border-radius:4px;
+                margin-top:25px;
+            }
+            
+            #postbodycontainer {
+                clear:both;
+            }
+            
+            #postbodycontainer img {
+                max-width:300px;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            
+            #postfoot {
+                margin-bottom:5px;
+                margin-top:5px;
+            }
+            
+            #notes {
+                padding:10px;
+                padding-left:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Begin Sidebar-->
+        <div id="sideboob" class="content">
+            <a href="/"><img id="logo" src="{image:Logo Image}"></a>
+            <a href="/"><img id="sidepic" src="{image:Sidebar Image}"></a>
+            <div id="desc">{Description}</div>
+            <form id="nav">
+                <select onchange="location=this.options[this.selectedIndex].value;" name="Nav">
+                    <option>Navigation</option>
+                    <option value="{BlogURL}">Home</option>
+                    <option value="/ask">Ask</option>
+                    {block:SubmissionsEnabled}
+                        <option value="/submit">Submit</option>
+                    {/block:SubmissionsEnabled}
+                    {block:Pages}
+                        <option value="{URL}">{Label}</option>
+                    {/block:Pages}
+                    {block:IfCustomLink1URL}
+                        <option value="{text:Custom Link 1 URL}">{text:Custom Link 1 Text}</option>
+                    {/block:IfCustomLink1URL}
+                    {block:IfCustomLink2URL}
+                        <option value="{text:Custom Link 2 URL}">{text:Custom Link 2 Text}</option>
+                    {/block:IfCustomLink2URL}
+                    {block:IfCustomLink3URL}
+                        <option value="{text:Custom Link 3 URL}">{text:Custom Link 3 Text}</option>
+                    {/block:IfCustomLink3URL}
+                    <option value="/archive">Archive</option>
+                    <option value="/random">Random</option>
+                    <option value="{RSS}">RSS</option>
+                    <option value="http://iamvishnu.tumblr.com/tagged/nate makes themes">Theme</option>
+                    
+                </select>
+            </form>
+            {block:PreviousPage}
+                <a href="{PreviousPage}" title="Previous">&larr;</a>
+            {/block:PreviousPage}
+            {block:NextPage}
+                <a href="{NextPage}" title="Next">&rarr;</a>
+            {/block:NextPage}
+        </div> 
+        <!--End Sidebar-->
+        
+        <!--Begin Post Wrapper-->
+        <div id="postwrapper" class="autopagerize_page_element">
+            {block:Posts}
+            <div class="post content">
+                <!--Begin Title/Content-->
+                    {block:Text}
+                        {block:Title}
+                            <a href="{Permalink}"><a href="{Permalink}"><div class="titlecontainer">
+                                <h2>{Title}</h2>
+                            </div></a>
+                        {/block:Title}
+                    {/block:Text}
+                    
+                    {block:Photo}
+                        <a href="{Permalink}"><img class="photo" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+                    {/block:Photo}
+                    
+                    {block:Panorama}
+                        {LinkOpenTag}<img class="photo" src="{PhotoURL-Panorama}"/>{LinkCloseTag}
+                    {/block:Panorama}
+                    
+                    {block:Photoset}
+                        <div id="photoset" class="photo">{Photoset-500}</div>
+                    {/block:Photoset}
+                    
+                    {block:Quote}
+                        <a href="{Permalink}"><div class="titlecontainer">
+                            <h2>{Quote}</h2>
+                        </div></a>
+                    {/block:Quote}
+                    
+                    {block:Link}
+                        <a href="{URL}"><div class="titlecontainer linkpost">
+                            <h2>{Name}</h2> <p>{Host}</p>
+                        </div></a>
+                    {/block:Link}
+                    
+                    {block:Chat}
+                        {block:Title}<a href="{Permalink}"><div class="titlecontainer">
+                            <h2>{Title}</h2>
+                        </div></a>{/block:Title}
+                    {/block:Chat}
+                    
+                    {block:Video}
+                        <div class="photo">
+                            {VideoEmbed-500}
+                        </div>
+                    {/block:Video}
+                    
+                    {block:Audio}
+                        {block:AlbumArt}
+                            <a href="{Permalink}"><img class="photo" src="{AlbumArtURL}"></a>
+                        {/block:AlbumArt}
+                        <div id="audiocontainer">
+                            <table id="audiodata">
+                                {block:TrackName}
+                                    <tr>
+                                        <td>Track:</td>
+                                        <td class="adata">{TrackName}</td>
+                                    </tr>
+                                {/block:TrackName}
+                                {block:Artist}
+                                    <tr>
+                                        <td>Artist:</td>
+                                        <td class="adata">{Artist}</td>
+                                    </tr>
+                                {/block:Artist}
+                                {block:Album}
+                                    <tr>
+                                        <td>Album:</td>
+                                        <td class="adata">{Album}</td>
+                                    </tr>
+                                {/block:Album}
+                                {block:PlayCount}
+                                    <tr>
+                                        <td>Plays:</td>
+                                        <td class="adata">{PlayCount}</td>
+                                    </tr>
+                                {/block:PlayCount}
+                            </table>
+                            {block:AudioPlayer}
+                                <div class="audioplayer">
+                                    {AudioPlayer}
+                                </div>
+                            {/block:AudioPlayer}
+                            {block:AudioEmbed}
+                                <div class="audioplayer">
+                                    {AudioEmbed-250}
+                                </div>    
+                            {/block:AudioEmbed}
+                        </div>
+                    {/block:Audio}
+                    
+                    {block:Answer}
+                        <a href="{Permalink}"><div class="titlecontainer">
+                            <table id="asktable">
+                                <tr>
+                                    <td><img id="askerpic" src="{AskerPortraitURL-40}"></td>
+                                    <td id="asker">{Asker}:</td>
+                                    <td>{Question}</td>
+                                </tr>
+                            </table>
+                        </div></a>
+                    {/block:Answer}
+                    <!--End Title/Content-->
+                    
+                    <!--Begin Body-->
+                    <div id="postbodycontainer">
+                        {block:Text}{Body}{/block:Text}
+                        {block:Photo}{Caption}{/block:Photo}
+                        {block:Panorama}{Caption}{/block:Panorama}
+                        {block:Photoset}{Caption}{/block:Photoset}
+                        {block:Quote}- {Source}{/block:Quote}
+                        {block:Link}{Description}{/block:Link}
+                        {block:Chat}
+                            <table id="chat">
+                                {block:Lines}<tr id="row" class={Alt}>
+                                    {block:Label}<td id="label">
+                                        {Label}
+                                    </td>{/block:Label}
+                                    <td id="line">
+                                        {Line}
+                                    </td>
+                                </tr>{/block:Lines}
+                            </table>
+                        {/block:Chat}
+                        {block:Video}{Caption}{/block:Video}
+                        {block:Audio}{Caption}{/block:Audio}
+                        {block:Answer}{Replies}{/block:Answer}
+                    </div>
+                    <!--End Body-->
+                    
+                    <!--Begin Metadata-->
+                    <div id="postfoot">
+                        <!--Index Pages Only-->
+                        {block:IndexPage}
+                            
+                                {block:RebloggedFrom}
+                                    (Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>)
+                                {/block:RebloggedFrom}
+                                
+                                <a href="{Permalink}">{block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{TimeAgo}{/block:Date}</a>
+                                
+                                {block:HasTags} 
+                                    Tagged: {block:Tags}<a href="{TagURL}">#{Tag}</a> {/block:Tags}
+                                {/block:HasTags}
+                        {/block:IndexPage}
+                        
+                        <!--Perma Pages Only-->
+                        {block:PermalinkPage}
+                            {block:RebloggedFrom}(Via <a href="{ReblogParentURL}">{ReblogParentName}</a> Source: <a href="{ReblogRootURL}">{ReblogRootName}</a>) {/block:RebloggedFrom} {block:NoteCount}{NoteCountWithLabel} | {/block:NoteCount}{block:Date}{12Hour}:{Minutes}{AmPm} {DayOfMonth} {ShortMonth} {Year}{/block:Date}
+                    {block:HasTags}
+                        Tagged: {block:Tags}<a href="{TagURL}">#{Tag}</a> {/block:Tags}
+                    {/block:HasTags}{/block:PermalinkPage}
+                    </div>
+                    <!--End Metadata-->
+                <!--End Post Block-->
+                
+                </div>
+                
+                <!--Begin Notes-->
+            {block:PostNotes}
+                <div id="notes" class="content">
+                    <h3>Notes</h3>
+                    {PostNotes-16}
+                </div>
+            {/block:PostNotes}
+            <!--End Notes-->
+            
+            {/block:Posts}
+            <!--End Posts-->
+            </div>
+        </div>
+        <!--End Post Wrapper-->
+    </body>
+</html>
