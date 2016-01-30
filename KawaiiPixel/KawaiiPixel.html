@@ -211,7 +211,7 @@ TERMS OF USE: This theme is 100% free to use for any blog. You are free to modif
             
             #postbodycontainer img {
                 max-width:200px;
-		height: auto;
+				height: auto;
                 border:1px solid {color:Content Accent Color};
                 display:block;
                 margin-left:auto;
@@ -279,7 +279,7 @@ TERMS OF USE: This theme is 100% free to use for any blog. You are free to modif
                 <select onchange="location=this.options[this.selectedIndex].value;" name="Nav">
                     <option>Nav</option>
                     <option value="{BlogURL}">Home</option>
-                    <option value="/ask">Ask</option>
+                    {block:AskEnabled}<option value="/ask">Ask</option>{/block:AskEnabled}
                     {block:SubmissionsEnabled}
                         <option value="/submit">Submit</option>
                     {/block:SubmissionsEnabled}
