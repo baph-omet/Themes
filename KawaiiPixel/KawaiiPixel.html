@@ -327,7 +327,16 @@ TERMS OF USE: This theme is 100% free to use for any blog. You are free to modif
                     {/block:Text}
                     
                     {block:Photo}
-                        <img class="photo" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+                        {block:IndexPage}
+                            <a href="{Permalink}">
+                                <img class="photo" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+                            </a>
+                        {/block:IndexPage}
+                        {block:PermalinkPage}
+                            <a href="{PhotoURL-HighRes}">
+                                <img class="photo" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+                            </a>
+                        {/block:PermalinkPage}
                     {/block:Photo}
                     
                     {block:Panorama}
